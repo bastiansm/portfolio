@@ -1,0 +1,355 @@
+.image {
+    height: 350px;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.hero .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .image img {
+    filter: grayscale(100);
+    transition: .3s;
+}
+
+.hero .image:hover img {
+    filter: grayscale(0);
+}
+
+.hero .image:hover::after {
+    content: "Thats me";
+    padding: 6px 12px;
+    background-color: var(--body);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    position: absolute;
+    color: var(--text);
+    margin-top: 50%;
+    font-size: .9rem;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.hero .text {
+    line-height: 1.8rem;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-btn a {
+    background: var(--body);
+    width: 150px;
+    transition: .4s;
+}
+
+.hero-btn a:hover {
+    background: #62ffb3c7;
+    color: var(--title);
+}
+
+.about .text {
+    line-height: 1.8rem;
+}
+
+.location {
+    border-radius: 7px;
+    width: fit-content;
+    background: var(--button);
+    border: 1px solid var(--border);
+    font-size: .95rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+}
+
+.location svg {
+    height: 1rem;
+}
+
+@media (max-width: 430px) {
+    .hero-btn {
+        flex-direction: column;
+    }
+
+    .hero-btn .text {
+        width: 100%;
+    }
+}
+
+.education .details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8rem;
+}
+
+.education .details:nth-child(2) {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.education .details .title {
+    font-size: 1.1rem;
+}
+
+.education .details .text {
+    line-height: 1.8rem;
+}
+
+.portfolio .ubd {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.portfolio .ubd:nth-child(2) {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.portfolio_links {
+    gap: 3px;
+    padding: 5px 1px 5px 15px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--body);
+    width: fit-content;
+    font-size: 1rem;
+    transition: .3s;
+    color: var(--title);
+}
+
+.portfolio .ubd:nth-child(2) .portfolio_links:hover {
+    background: #62cdffd8;
+    color: var(--title);
+}
+
+.portfolio .ubd:nth-child(3) .portfolio_links:hover {
+    background: #6f62ffd8;
+    color: var(--title);
+}
+
+.portfolio_links:hover svg {
+    fill: var(--title);
+}
+
+.portfolio .image {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--body);
+    color: var(--button);
+}
+
+.portfolio .title:nth-child(1) {
+    margin-bottom: .5rem;
+}
+
+.portfolio .title:nth-child(2) {
+    font-size: 1.1rem;
+}
+
+.portfolio .text {
+    line-height: 1.8rem;
+}
+
+.portfolio .ubd .title p {
+    margin-left: 5px;
+    color: var(--title);
+    font-size: 1rem;
+}
+
+.container:nth-child(1) {
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width: 808px) {
+
+    section {
+        flex-direction: column;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .container:nth-child(1) {
+        top: auto;
+        height: fit-content;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    .container:nth-child(2) {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .container {
+        gap: 1rem;
+    }
+
+    .wrapper {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .container, .wrapper {
+        width: 100%;
+    }
+}
+
+.skills .logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills .logo-wrap .logo {
+    height: 80px;
+    width: 80px;
+    padding: 12px;
+    filter: grayscale(100);
+    transition: .5s;
+    background-color: var(--body);
+    border-radius: 5px;
+}
+
+.skills .logo-wrap .logo:hover {
+    filter: grayscale(0);
+}
+
+.skills .logo-wrap .html:hover {
+    box-shadow: 0px 0px 20px 0 rgba(255, 77, 0, 0.1);
+}
+
+.skills .logo-wrap .html:hover::before, 
+.skills .logo-wrap .css:hover::before,
+.skills .logo-wrap .js:hover::before
+{
+    content: "html";
+    color: var(--text);
+    padding: 3px 10px;
+    background: var(--body);
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    position: absolute;
+    left: 15%;
+    top: -35%;
+    text-transform: uppercase;
+    font-size: .8rem;
+} 
+
+.skills .logo-wrap .css:hover {
+    box-shadow: 0px 0px 20px 0 #0080ff1a;
+}
+
+.skills .logo-wrap .css:hover::before {
+    content: "css";
+    left: 20%;
+    top: -35%;
+} 
+
+.skills .logo-wrap .js:hover {
+    box-shadow: 0px 0px 16px 0 #f6ff001a;
+}
+
+.skills .logo-wrap .js:hover::before {
+    content: "javascript";
+    left: -9px;
+    top: -35%;
+}
+
+.contact a {
+    width: 100%;
+    padding: 12px 0;
+    background: var(--button);
+    justify-content: center;
+    align-items: center;
+    color: var(--title);
+    transition: .5s;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-weight: 600;
+}
+
+.contact .github:hover {
+    background-color: var(--title);
+    color: var(--body);
+}
+
+.contact .github:hover svg {
+    fill: var(--body);
+}
+
+.contact .email:hover {
+    background-color: #ff6262;
+}
+
+.contact .ig:hover {
+    background-color: #ff62e2;
+}
+
+svg {
+    height: 1.2rem;
+    fill: var(--title);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer .text {
+    font-size: .9rem;
+}
+
+footer span a {
+    padding-left: 5px;
+    color: var(--title);
+}
+
+footer span a:hover {
+    text-decoration: underline;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--body);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-hidden {
+    transition: 1s;
+    opacity: 0;
+    transform: scale(2.3);
+    visibility: hidden;
+}
+
+.bg {
+    background-image: url("../img/foto/bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;   
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    height: 100%;
+    width: 100%;
+}
